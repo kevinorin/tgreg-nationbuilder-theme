@@ -1,1 +1,116 @@
 @import "variables.less";
+@import "responsive.less";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,700,700italic,400italic);
+
+body {
+  padding-top: 50px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutters > [class^="col-"],
+.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+button,
+.navbar-inverse .navbar-nav>li>a {
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.container {
+	max-width: 1024px;
+}
+
+#homepage .banner {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+// Nav Menu
+.navbar-nav {
+	float: right;
+}
+.header-cta {
+	float: right;
+	margin: 25px 0 0 0;
+}
+li#donate {
+	margin: 27px 10px 0 0;
+}
+button.btn-purp {
+    background: @violet;
+    border: none;
+    color: @white;
+    padding:8px 15px;
+}
+.navbar-inverse {
+	background: @white;
+}
+.navbar-nav>li>a {
+	line-height:60px;
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: @bluegray;
+}
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:focus, 
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>li>a:hover {
+	background: transparent;
+	color: @bluegray;
+}
+
+
+// Banner
+section#banner {
+    background-image: url('../images/banner/banner-tgreg-001.jpg');
+  	border-bottom: 3px solid @red;
+  	margin: 0 auto;
+  	margin-top: 40px;
+  	min-height: 372px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+// Sprites
+.stitches-sprite-social(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+.sprite-social.sprite-social-facebook:hover {
+	background-position: -29px -5px !important;
+}
+.sprite-social {
+		background-image: url('../images/sprite-social.png');
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+    margin:35px 0 0 10px !important;
+
+    &.sprite-social-facebook {
+        .stitches-sprite-social(-5px, -5px, 14px, 14px);
+    }
+
+    &.sprite-social-facebook-gray {
+        .stitches-sprite-social(-29px, -5px, 14px, 14px);
+    }
+
+    &.sprite-social-twitter {
+        .stitches-sprite-social(-5px, -29px, 14px, 14px);
+    }
+
+    &.sprite-social-twitter-gray {
+        .stitches-sprite-social(-29px, -29px, 14px, 14px);
+    }
+}
+
