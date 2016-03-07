@@ -17,9 +17,9 @@
     <link href="assets/styles/styles.min.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body id="top">
     <!-- Nav Menu -->
-    <nav id="home" class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -28,21 +28,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="T. Greg" height="55" /></a>
+          <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="T. Greg" /></a>
         </div>
         <!--<div class="header-cta mob-off">
           <button class="btn-purp" onclick="window.location.href='/donate'">Donate</a>
         </div>-->
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#about">Meet T. Greg</a></li>
+            <li class="active"><a href="#top">Home</a></li>
+            <li><a href="#abouttgreg">About</a></li>
             <li><a href="#issues">Issues</a></li>
             <li><a href="#news">News</a></li>
-            <li><a href="#coalition">Coalition Groups</a></li>
+            <li><a href="#coalition">Coalitions</a></li>
             <li id="donate"><button class="btn violet" onclick="window.location.href='/donate'">Donate</a></button></li>
-            <li><a href="#" class="sprite-social sprite-social-twitter">&nbsp;</a>
-            <li><a href="#" class="sprite-social sprite-social-facebook">&nbsp;</a>
+            <li class="social"><a href="#" class="sprite-social sprite-social-twitter">&nbsp;</a>
+            <li class="social"><a href="#" class="sprite-social sprite-social-facebook">&nbsp;</a>
           </ul>
         </div><!--/.nav-collapse -->
 
@@ -51,18 +51,19 @@
 
     <section id="banner" class="row no-gutters">
         <div class="container">
-          <h1>stuff here</h1>
-          <h2>more stuff here</h2>
+          <div class="col-lg-8 col-lg-offset-4 col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6">
+            <img src="assets/images/banner/banner-copy.png" alt="T. Greg for NC Senate" /><br />
+            <button class="btn red" onclick="window.location.href='/donate'">volunteer</a></button>
+          </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="row">
-      <div class="container">
-        <div class="col-lg-12">
+    <section id="about" class="container">
+      <div class="row">
+        <div class="col-lg-12" id="abouttgreg">
           <quote>&ldquo;Together we the people achieve more than any single person could ever do alone. It is time to move beyond partisanship and build a stronger tomorrow.&rdquo;</quote>
-          [div line]
-          <h1>ABOUT</h1>
+          <hr class="hr-about">
           <h2>Get to know T. Gregg</h2>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
           <p><button class="btn red" onclick="window.location.href='/more'">see more</a></button></p>
@@ -70,9 +71,14 @@
       </div>
     </section>
 
+    <section id="header-about" class="row no-gutters">
+        <div class="container">
+        </div>
+    </section>
+
     <!-- Issues Section -->
     <section id="issues" class="container">
-      <h1>Issues</h1>
+      <hr class="hr-issues">
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
           <h2>Jobs</h2>
@@ -90,11 +96,12 @@
           <p><a href="#">See more</a></p>
         </div>
       </div>
-      <p><button class="btn red" onclick="window.location.href='/more'">see all issues</a></button></p>
+      <p class="pbtn"><button class="btn red" onclick="window.location.href='/more'">see all issues</a></button></p>
     </section>
 
     <!-- News Section -->
-    <section id="about" class="container">
+    <section id="news" class="container">
+      <hr class="hr-news">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="col-lg-3 no-gutters">
@@ -135,11 +142,24 @@
           </div>
         </div>
       </div>
-      <p><button class="btn red" onclick="window.location.href='/more'">see all news</a></button></p>
+      <p class="pbtn"><button class="btn red" onclick="window.location.href='/more'">see all news</a></button></p>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer" class="row">
+      <div class="container">
+        <div class="col-lg-12">
+          <p>footer</p>
+        </div>
+      </div>
     </section>
 
     <!-- Bootstrap core JavaScript -->
     <script src="assets/jquery/dist/jquery.min.js"></script>
-    <script src="assets//bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script src="assets/scripts/custom.min.js"></script>
+
   </body>
 </html>

@@ -3,10 +3,48 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,700,700italic,400italic);
 
+* {outline: none !important;}
+
 body {
   padding-top: 50px;
 }
-
+h1, h2, h3, h4, h5, h6, p, a {
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+p {
+	margin: 10px 0
+}
+.pbtn {
+	margin: 40px 0;
+}
+p a {
+	color: @red;
+	font-size:15px;
+	font-weight: 600;
+	text-decoration: underline;
+}
+p a:hover, p:active {
+	color: @violet;
+}
+h2 { 
+	color: @black; 
+	font-size: 27px;
+  font-weight: 800;
+	margin: 10px 0;
+}
+quote {
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 200;
+  color: @darkgray;
+  line-height: 30px;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  text-align: center;
+}
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -17,6 +55,10 @@ body {
   padding-left: 0;
 }
 
+button.btn, button.btn:hover, button.btn:active {
+	color: @white;
+}
+
 button,
 .navbar-inverse .navbar-nav>li>a {
 	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -24,17 +66,57 @@ button,
 	font-weight: 600;
 	text-transform: uppercase;
 }
+section button.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 30px;
+}
 
 .container {
 	max-width: 1024px;
 }
 
 #homepage .banner {
-  padding: 40px 15px;
+padding: 40px 0 30px 0;
   text-align: center;
 }
+section#about {
+  padding: 50px 15px 20px 15px;
+}
+section {
+  padding: 75px 15px;
+}
+
+// Horizontal Rules
+hr {
+	border-top: 1px solid @medgray;
+	margin: 0 auto 50px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+hr:after {
+  background-color: #ffffff;
+  color: @medgray;
+}
+hr:after {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  top: -0.8em;
+}
+hr.hr-about:after { content: "About"; }
+hr.hr-issues:after { content: "Issues"; }
+hr.hr-news:after { content: "News"; }
 
 // Nav Menu
+.navbar {
+	height:80px;
+}
 .navbar-nav {
 	float: right;
 }
@@ -53,42 +135,82 @@ button.btn {
 }
 .red { background-color: @red;}
 .violet { background-color: @violet;}
-
+.navbar-brand {
+	height:70px;
+}
 .navbar-inverse {
 	background: @white;
+	border: none;
 }
 .navbar-nav>li>a {
 	line-height:60px;
+	padding: 15px 10px;
 }
-.navbar-inverse .navbar-nav>li>a {
-	color: @bluegray;
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-nav>li>a.active {
+	color: @bluegray !important;
 }
 .navbar-inverse .navbar-nav>.active>a, 
 .navbar-inverse .navbar-nav>.active>a:focus, 
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>li>a:hover {
-	background: transparent;
 	color: @bluegray;
 }
-
-
-// Banner
-section#banner {
-    background-image: url('../images/banner/banner-tgreg-001.jpg');
-  	border-bottom: 3px solid @red;
-  	margin: 0 auto;
-  	margin-top: 40px;
-  	min-height: 372px;
-    overflow: hidden;
-    position: relative;
+.navbar-nav>.active>a, 
+.navbar-nav>.active>a:focus, 
+.navbar-nav>.active>a:hover,
+.navbar-nav>li>a:hover {
+	background-color: transparent !important;
 }
+
+// Banner & Headers
+section#banner {
+  background-image: url('../images/banner/banner-tgreg-001.jpg');
+	border-bottom: 3px solid @red;
+	margin: 0 auto;
+	margin-top: 40px;
+	min-height: 372px;
+  overflow: hidden;
+  padding: 30px 0 0 0;
+  position: relative;
+}
+
+section#about h2 {
+  text-align: center;
+}
+section#about p {
+	font-size: 15px;
+  text-align: center;
+}
+
+section#banner img {
+	width: 100%;
+}
+#banner button.btn, #banner button.btn:hover, #banner button.btn:active {
+	color: @white;
+  margin: 0 auto;
+  display: block;
+  margin-top: 20px;
+  font-size: 24px;
+  padding: 8px 30px;
+}
+
+section#header-about {
+  background-image: url('../images/header-about.jpg');
+	margin: 0 auto;
+	margin-top: 40px;
+	min-height: 294px;
+  overflow: hidden;
+  position: relative;
+}
+
 
 
 // Sprites
 .stitches-sprite-social(@x: 0, @y: 0, @width: 0, @height: 0) {
-    background-position: @x @y;
-    width: @width;
-    height: @height;
+  background-position: @x @y;
+  width: @width;
+  height: @height;
 }
 .sprite-social.sprite-social-facebook:hover {
 	background-position: -29px -5px !important;
@@ -115,5 +237,12 @@ section#banner {
     &.sprite-social-twitter-gray {
         .stitches-sprite-social(-29px, -29px, 14px, 14px);
     }
+}
+
+// Footer
+section#footer {
+	background-color: @violet;
+	color: @white;
+	min-height:100px;
 }
 
