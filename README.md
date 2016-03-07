@@ -12,5 +12,5 @@
 - Quality Assurance / Cross Device Testing: ~3 hours
 
 
-Copyright &copyright 2016 Kevin Orin Williams.
-Design Copyright &copyright 2016 Sean McClure | Visflow Studios
+Copyright &copy; 2016 Kevin Orin Williams.
+Design Copyright &copy; 2016 Sean McClure | Visflow Studios - All rights reserved.
