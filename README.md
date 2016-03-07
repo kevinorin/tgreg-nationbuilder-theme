@@ -11,6 +11,9 @@
 - HTML/CSS/JS to Custom NationBuilder Homepage/Subpage Template: ~7 hours
 - Quality Assurance / Cross Device Testing: ~3 hours
 
+##
 
-Copyright &copy; 2016 Kevin Orin Williams.
-Design Copyright &copy; 2016 Sean McClure | Visflow Studios - All rights reserved.
+
+
+<p>Copyright &copy; 2016 Kevin Orin Williams.<br />
+Design Copyright &copy; 2016 Sean McClure | Visflow Studios - All rights reserved.</p>
