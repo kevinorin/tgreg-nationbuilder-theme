@@ -13,4 +13,12 @@ $( document ).ready(function() {
       }
     });
   });
+
+  // Collapse mobile menu after selection
+  $(function(){ 
+    var navMain = $("#nav-main");
+    navMain.on("click", "a", null, function () {
+       navMain.collapse('hide');
+    });
+  });
 });
