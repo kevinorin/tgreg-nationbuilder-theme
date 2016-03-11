@@ -14,11 +14,7 @@ $( document ).ready(function() {
     });
   });
 
-  // Collapse mobile menu after selection
-  $(function(){ 
-    var navMain = $("#nav-main");
-    navMain.on("click", "a", null, function () {
-       navMain.collapse('hide');
-    });
+  $('.nav li').on('click', function(){
+    $('.navbar-toggle').click() //bootstrap 3.x by Richard
   });
 });

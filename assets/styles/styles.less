@@ -125,7 +125,9 @@ hr.hr-news:after { content: "News"; }
 
 // Nav Menu
 .navbar-nav {
+  margin: 0 -15px;
 	float: right;
+  z-index: 99999;
 }
 .header-cta {
 	float: right;
@@ -148,15 +150,28 @@ button.btn {
 .navbar-inverse {
 	background: @white;
 	border-bottom: 1px solid @lightgray;
+  height: 91px;
 }
 .navbar-nav>li>a {
 	line-height:60px;
 	padding: 15px 10px;
 }
 .navbar-inverse .navbar-nav>li>a,
-.navbar-inverse .navbar-nav>li>a.active {
-	color: @bluegray !important;
+.navbar-inverse .navbar-nav>li>a.active,
+.navbar-inverse .navbar-nav>li>a.hover,
+.navbar-inverse .navbar-nav>li>a.focus {
+	color: @bluegray;
 }
+.navbar-inverse .navbar-nav>li.red>a,
+.navbar-inverse .navbar-nav>li.red>a.active,
+.navbar-inverse .navbar-nav>li.red>a.hover,
+.navbar-inverse .navbar-nav>li.red>a.focus {
+  color: @red !important;
+}
+li.red {
+  background-color: transparent !important;
+}
+
 .navbar-inverse .navbar-nav>.active>a, 
 .navbar-inverse .navbar-nav>.active>a:focus, 
 .navbar-inverse .navbar-nav>.active>a:hover,
@@ -169,6 +184,11 @@ button.btn {
 .navbar-nav>li>a:hover {
 	background-color: transparent !important;
 }
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: 450px;
+}
+
 
 // Banner & Headers
 section#banner {
@@ -204,6 +224,8 @@ section#banner img {
 
 section#header-about {
   background-image: url('../images/header-about.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
 	margin: 0 auto;
 	margin-top: 40px;
 	min-height: 294px;
@@ -262,7 +284,7 @@ section#footer {
 	color: @white;
 	min-height:100px;
   padding: 30px 0 50px;
-  .first-list {
+  .row-padding-left {
     padding-left:5px;
   }
   li a {
@@ -287,4 +309,3 @@ section#footer {
     border-bottom: 1px solid @lightviolet;
   }
 }
-

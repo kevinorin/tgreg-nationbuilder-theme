@@ -35,25 +35,27 @@
         </div>-->
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#top">Home</a></li>
-            <li><a href="#abouttgreg">About</a></li>
+            <li class="active"><a href="#top" data-toggle="collapse" data-target=".navbar-collapse">Home</a></li>
+            <li><a href="#abouttgreg" data-toggle="collapse" data-target=".navbar-collapse">About</a></li>
             <li><a href="#issues">Issues</a></li>
             <li><a href="#news">News</a></li>
             <li><a href="#coalition">Coalitions</a></li>
-            <li id="donate"><button class="btn violet" onclick="window.location.href='/donate'">Donate</a></button></li>
+            <li id="donate" class="hidden-xs"><button class="btn violet" onclick="window.location.href='/donate'">Donate</a></button></li>
             <li class="social"><a href="#" class="sprite-social sprite-social-twitter">&nbsp;</a>
             <li class="social"><a href="#" class="sprite-social sprite-social-facebook">&nbsp;</a>
+            <li class="visible-xs red"><a href="#volunteer">Volunteer/Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
 
       </div>
     </nav>
 
-    <section id="banner" class="row no-gutters">
+    <section id="banner" class="no-gutters">
         <div class="container">
           <div class="col-lg-8 col-lg-offset-4 col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6">
             <img src="assets/images/banner/banner-copy.png" alt="T. Greg for NC Senate" /><br />
-            <button class="btn red" onclick="window.location.href='/donate'">volunteer</a></button>
+            <button class="btn red" onclick="window.location.href='/volunteer'">volunteer</a></button>
+            <button class="btn violet visible-xs" onclick="window.location.href='/donate'">donate</a></button>
           </div>
         </div>
     </section>
@@ -71,32 +73,34 @@
       </div>
     </section>
 
-    <section id="header-about" class="row no-gutters">
+    <section id="header-about" class="no-gutters">
         <div class="container">
         </div>
     </section>
 
     <!-- Issues Section -->
-    <section id="issues" class="container">
-      <hr class="hr-issues">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <h2>Jobs</h2>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-          <p><a href="#">See more</a></p>
+    <section id="issues">
+      <div class="container">
+        <hr class="hr-issues">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <h2>Jobs</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p><a href="#">See more</a></p>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <h2>Education</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p><a href="#">See more</a></p>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <h2>Court Reform</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p><a href="#">See more</a></p>
+          </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <h2>Education</h2>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-          <p><a href="#">See more</a></p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <h2>Court Reform</h2>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-          <p><a href="#">See more</a></p>
-        </div>
+        <p class="pbtn"><button class="btn red" onclick="window.location.href='/more'">see all issues</a></button></p>
       </div>
-      <p class="pbtn"><button class="btn red" onclick="window.location.href='/more'">see all issues</a></button></p>
     </section>
 
     <!-- News Section -->
@@ -149,18 +153,16 @@
 
     <!-- Footer Section -->
     <section id="footer">
-      <div class="row">
-        <div class="container">
+      <div class="container">
+        <div class="row">
           <div class="col-xs-12 logo pull-left">
-            <img src="assets/images/logo-footer.png" alt="T. Greg" />
+            <a href="#top"><img src="assets/images/logo-footer.png" alt="T. Greg" /></a>
             <span class="pages">Pages</span>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="container">
+        <div class="row row-padding-left">
           <div class="col-lg-1 col-md-1 col-sm-1 col-xs-6">
-            <ul class="list-unstyled first-list">
+            <ul class="list-unstyled">
                 <li><a href="#top">HOME</a><li>
             </ul>
           </div>
