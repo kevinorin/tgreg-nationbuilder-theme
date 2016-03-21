@@ -10,6 +10,8 @@
 
     <title>T. Greg</title>
 
+    <link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico"/>
+
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -52,13 +54,18 @@
 
     <section id="banner" class="no-gutters">
         <div class="container">
-          <div class="col-lg-8 col-lg-offset-4 col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6">
-            <img src="assets/images/banner/banner-copy.png" alt="T. Greg for NC Senate" /><br />
-            <button class="btn red" onclick="window.location.href='/volunteer'">volunteer</a></button>
-            <button class="btn violet visible-xs" onclick="window.location.href='/donate'">donate</a></button>
+          <div class="col-lg-8 col-lg-offset-4 col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 col-xs-6 col-xs-offset-6">
+            <!--<img src="assets/images/banner/banner-copy.png" alt="T. Greg for NC Senate" /><br />-->
+            <button class="btn red mob-off" onclick="window.location.href='/volunteer'">volunteer</a></button>
           </div>
         </div>
     </section>
+
+    <!-- Call to Actions -->
+    <div class="col-xs-12 cta-btns no-gutters mob-on">
+      <button class="btn red" onclick="window.location.href='/volunteer'">volunteer</a></button>
+      <button class="btn violet visible-xs" onclick="window.location.href='/donate'">donate</a></button>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="container">

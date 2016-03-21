@@ -61,7 +61,9 @@ quote {
   padding-right: 0;
   padding-left: 0;
 }
-
+.mob-on {
+  display: none;
+}
 button.btn, button.btn:hover, button.btn:active {
 	color: @white;
 }
@@ -192,11 +194,14 @@ li.red {
 
 // Banner & Headers
 section#banner {
-  background-image: url('../images/banner/banner-tgreg-001.jpg');
+  background-image: url('../images/banner/banner-tgreg-centered-desktop.png'), url('../images/banner/banner-tgreg-bg.jpg') !important;
+  background-size: 70%, cover !important;
+  background-position: bottom center,center;
+  background-repeat: no-repeat, no-repeat;
 	border-bottom: 3px solid @red;
+  height: 372px;
 	margin: 0 auto;
 	margin-top: 40px;
-	min-height: 372px;
   overflow: hidden;
   padding: 30px 0 0 0;
   position: relative;
@@ -220,6 +225,18 @@ section#banner img {
   margin-top: 20px;
   font-size: 24px;
   padding: 8px 30px;
+}
+
+// Call to Actions
+.col-xs-12.cta-btns.no-gutters.mob-on {
+  position: relative;
+  bottom: 3px;
+}
+.cta-btns button {
+  width: 50%;
+  display: inline-block !important;
+  margin: 0;
+  float: left;
 }
 
 section#header-about {
